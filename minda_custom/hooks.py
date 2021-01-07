@@ -90,7 +90,15 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+    "cron": {
+        "*/15 * * * *":[
+            "minda_custom.custom.get_check"
+        ],
+        "45 14 * * *":[
+            "minda_custom.custom.get_check"
+        ]
+    }
 # 	"all": [
 # 		"minda_custom.tasks.all"
 # 	],
@@ -106,7 +114,7 @@ app_license = "MIT"
 # 	"monthly": [
 # 		"minda_custom.tasks.monthly"
 # 	]
-# }
+}
 
 # Testing
 # -------
